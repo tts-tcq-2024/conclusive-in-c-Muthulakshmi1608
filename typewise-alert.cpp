@@ -54,7 +54,7 @@ void sendToController(BreachType breachType) {
 }
 //Data Structure for sending email message
 typedef struct {
-    const char* message;
+    char* message;
 } EmailMessage;
 
 EmailMessage emailMessages[] = {
