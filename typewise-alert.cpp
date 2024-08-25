@@ -60,7 +60,7 @@ typedef struct {
 EmailMessage emailMessages[] = {
     [TOO_LOW] = {"Hi, the temperature is too low"},
     [TOO_HIGH] = {"Hi, the temperature is too high"},
-    [NORMAL] = {"\0"}
+    [NORMAL] = {""}
 };
 
 void sendToEmail(BreachType breachType) {
