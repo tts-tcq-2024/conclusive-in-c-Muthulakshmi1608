@@ -30,7 +30,7 @@ BreachType classifyTemperatureBreach(
     CoolingType coolingType, double temperatureInC) {
   int lowerLimit = 0;
   int upperLimit = 0;
-  TemperatureLimits limits = limitsTable[coolingType];
+  Temperature_Limit limits = limitsTable[coolingType];
   return inferBreach(temperatureInC, limits.lowerLimit, limits.upperLimit);
 }
 
