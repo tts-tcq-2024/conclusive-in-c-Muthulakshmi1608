@@ -42,6 +42,10 @@ AlertFunction alertFunctions[] = {
 void checkAndAlert(
     AlertTarget alertTarget, BatteryCharacter batteryChar, double temperatureInC) {
 
+if (alertTarget < 0 || alertTarget >= sizeof(alertFunctions) / sizeof(alertFunctions[0])) {
+    printf("Invalid alert target!\n");
+  }
+
   BreachType breachType = classifyTemperatureBreach(
     batteryChar.coolingType, temperatureInC
   );
