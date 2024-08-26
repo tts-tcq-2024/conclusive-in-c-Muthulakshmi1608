@@ -43,3 +43,9 @@ TEST(TypeWiseAlertTestSuite, CheckTooHighTemperatureToEmail) {
     checkAndAlert(TO_EMAIL, batteryChar, 60.0); // Temperature above 35°C
 }
 
+// Test case: when temperature is below lower limit
+TEST(TypeWiseAlertTestSuite, InfersBreachBelowLowerLimits) {
+    BatteryCharacter batteryChar = { HI_ACTIVE_COOLING, "Test" };
+    checkAndAlert(TO_CONTROLLER, batteryChar, 30.0); // Temperature  within 0°C to 45°C
+}
+
