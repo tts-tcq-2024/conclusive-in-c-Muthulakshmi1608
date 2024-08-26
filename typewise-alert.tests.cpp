@@ -46,32 +46,32 @@ TEST(TypeWiseAlertTestSuite, CheckTooHighTemperatureToEmail) {
 // Test case: when temperature is within  limit
 TEST(TypeWiseAlertTestSuite, CheckhiactiveTemperatureToController) {
     BatteryCharacter batteryChar = { HI_ACTIVE_COOLING, "Test" };
-    checkAndAlert(TO_CONTROLLER, batteryChar, 30.0); // Temperature  within 0°C to 45°C
+    checkAndAlert(TO_CONTROLLER, batteryChar, 30.0);
 }
 
 // Test case: when temperature is below lower limit
 TEST(TypeWiseAlertTestSuite, CheckhiactiveTemperatureonLowerLimit) {
     BatteryCharacter batteryChar = { HI_ACTIVE_COOLING, "Test" };
-    checkAndAlert(TO_CONTROLLER, batteryChar, 0.0); // Temperature  within 0°C to 45°C
+    checkAndAlert(TO_CONTROLLER, batteryChar, 0.0); 
 }
 
 // Test case: when temperature is above upper limit
 TEST(TypeWiseAlertTestSuite, CheckhiactiveTemperatureonUpperLimit) {
     BatteryCharacter batteryChar = { HI_ACTIVE_COOLING, "Test" };
-    checkAndAlert(TO_CONTROLLER, batteryChar, 45.0); // Temperature  within 0°C to 45°C
+    checkAndAlert(TO_CONTROLLER, batteryChar, 45.0); 
 }
 
 TEST(TypeWiseAlertTestSuite, CheckmedactiveTemperaturewithinLimit) {
     BatteryCharacter batteryChar = { HI_ACTIVE_COOLING, "Test" };
-    checkAndAlert(TO_CONTROLLER, batteryChar, 25.0); // Temperature  within 0°C to 45°C
+    checkAndAlert(TO_CONTROLLER, batteryChar, 25.0); 
 }
 
 TEST(TypeWiseAlertTestSuite, CheckmedactiveTemperaturonlowerLimit) {
     BatteryCharacter batteryChar = { HI_ACTIVE_COOLING, "Test" };
-    checkAndAlert(TO_CONTROLLER, batteryChar, 0.0); // Temperature  within 0°C to 45°C
+    checkAndAlert(TO_CONTROLLER, batteryChar, 0.0); 
 }
 
 TEST(TypeWiseAlertTestSuite, CheckmedactiveTemperaturonupperLimit) {
     BatteryCharacter batteryChar = { HI_ACTIVE_COOLING, "Test" };
-    checkAndAlert(TO_EMAIL, batteryChar, 40.0); // Temperature  within 0°C to 45°C
+    checkAndAlert(TO_EMAIL, batteryChar, 40.0); 
 }
